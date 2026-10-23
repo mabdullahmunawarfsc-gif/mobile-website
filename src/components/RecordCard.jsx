@@ -21,7 +21,7 @@ export default function RecordCard({ record, onMarkSold, onDelete }) {
           <img
             src={record.mobilePhoto}
             alt={record.modelName}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain bg-gray-100 group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-gray-300">

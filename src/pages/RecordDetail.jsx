@@ -82,7 +82,7 @@ export default function RecordDetail() {
                 <img
                   src={record.mobilePhoto}
                   alt={record.modelName}
-                  className="w-full aspect-[4/3] object-cover"
+                  className="w-full aspect-[4/3] object-contain bg-gray-100"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                   <ZoomIn className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -102,7 +102,7 @@ export default function RecordDetail() {
                 className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden cursor-zoom-in group"
                 onClick={() => openLightbox(record.sellerPhoto, 'Seller Photo')}
               >
-                <img src={record.sellerPhoto} alt="Seller" className="w-full aspect-square object-cover group-hover:scale-105 transition-transform" />
+                <img src={record.sellerPhoto} alt="Seller" className="w-full aspect-square object-contain bg-gray-100 group-hover:scale-105 transition-transform" />
               </div>
             )}
             {record.cnicFront && (
@@ -110,7 +110,7 @@ export default function RecordDetail() {
                 className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden cursor-zoom-in group"
                 onClick={() => openLightbox(record.cnicFront, 'CNIC Front')}
               >
-                <img src={record.cnicFront} alt="CNIC Front" className="w-full aspect-square object-cover group-hover:scale-105 transition-transform" />
+                <img src={record.cnicFront} alt="CNIC Front" className="w-full aspect-square object-contain bg-gray-100 group-hover:scale-105 transition-transform" />
               </div>
             )}
             {record.cnicBack && (
@@ -118,7 +118,7 @@ export default function RecordDetail() {
                 className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden cursor-zoom-in group"
                 onClick={() => openLightbox(record.cnicBack, 'CNIC Back')}
               >
-                <img src={record.cnicBack} alt="CNIC Back" className="w-full aspect-square object-cover group-hover:scale-105 transition-transform" />
+                <img src={record.cnicBack} alt="CNIC Back" className="w-full aspect-square object-contain bg-gray-100 group-hover:scale-105 transition-transform" />
               </div>
             )}
           </div>

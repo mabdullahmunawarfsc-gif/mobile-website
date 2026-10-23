@@ -1,16 +1,41 @@
-# React + Vite
+# Mobile Ledger
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive web app for mobile phone shopkeepers to record daily purchases and sales, track stock, and see profit/loss automatically.
 
-Currently, two official plugins are available:
+**Live demo:** https://mobile-website-dnjh.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Add Entry form with auto date, model, IMEI, purchase price, seller details and photos (phone, seller, CNIC front and back)
+- View Records page with thumbnails, search and In Stock / Sold filters
+- Mark as Sold with automatic profit/loss calculation and status update
+- Record detail page with full purchase and sale information
+- Dashboard with inventory value, total sales, profit, loss and charts
+- Fully responsive, with bottom navigation on mobile
+- Demo data loader and clear-all option
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the Oxlint configuration
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- Context API
+- Recharts
+- lucide-react
+- Deployed on Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Getting Started
+
+```bash
+git clone https://github.com/mabdullahmunawarfsc-gif/mobile-website.git
+cd mobile-website
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+## Note
+
+Data is currently stored in the browser's localStorage. A backend and database (Firebase or Supabase) is the planned next step.

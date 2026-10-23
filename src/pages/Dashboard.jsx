@@ -361,7 +361,7 @@ export default function Dashboard() {
                       >
                         <div className="w-12 h-12 rounded-lg bg-gray-100 overflow-hidden shrink-0">
                           {record.mobilePhoto ? (
-                            <img src={record.mobilePhoto} alt={record.modelName} className="w-full h-full object-cover" />
+                            <img src={record.mobilePhoto} alt={record.modelName} className="w-full h-full object-contain" />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-gray-300 text-lg">📱</div>
                           )}
@@ -401,7 +401,7 @@ export default function Dashboard() {
                       >
                         <div className="w-12 h-12 rounded-lg bg-gray-100 overflow-hidden shrink-0">
                           {record.mobilePhoto ? (
-                            <img src={record.mobilePhoto} alt={record.modelName} className="w-full h-full object-cover" />
+                            <img src={record.mobilePhoto} alt={record.modelName} className="w-full h-full object-contain" />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-gray-300 text-lg">📱</div>
                           )}

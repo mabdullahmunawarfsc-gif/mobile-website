@@ -4,6 +4,8 @@ import { generateDemoRecords } from '../utils/seedData'
 const RecordsContext = createContext(null)
 
 const STORAGE_KEY = 'mobile-ledger-records'
+const SEED_VERSION_KEY = 'mobile-ledger-seed-version'
+const CURRENT_SEED_VERSION = '2'
 
 function loadRecords() {
   try {
@@ -18,13 +20,24 @@ function saveRecords(records) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(records))
 }
 
+function getSeedVersion() {
+  return localStorage.getItem(SEED_VERSION_KEY)
+}
+
+function setSeedVersion(version) {
+  localStorage.setItem(SEED_VERSION_KEY, version)
+}
+
 export function RecordsProvider({ children }) {
   const [records, setRecords] = useState(() => {
     const existing = loadRecords()
-    // Auto-load demo data only when localStorage is empty
-    if (existing.length === 0) {
+    const version = getSeedVersion()
+
+    // Auto-load demo data when localStorage is empty or seed version changed
+    if (existing.length === 0 || version !== CURRENT_SEED_VERSION) {
       const demo = generateDemoRecords()
       saveRecords(demo)
+      setSeedVersion(CURRENT_SEED_VERSION)
       return demo
     }
     return existing
